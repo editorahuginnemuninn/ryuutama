@@ -1,0 +1,33 @@
+{
+  "id": "ryuutama",
+  "title": "Ryuutama um RPG de Fantasia Natural",
+  "description": "Ainda precisa fazer.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "11",
+    "maximum": "11"
+  },
+  "authors": [
+    {
+      "name": "RogerioLobo",
+      "url": "www.huginnemuninn.com.br",
+      "email": "editorahuginnemuninn@gmail.com",
+      "discord": "YOUR DISCORD USERNAME HERE"
+    }
+  ],
+  "scripts": [],
+  "esmodules": [],
+  "styles": [],
+  "packs": [],
+  "socket": false,
+  "initiative": "1d20",
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "hp",
+  "secondaryTokenAttribute": "mp",
+  "url": "https://your/hosted/system/repo/",
+  "background": "systems/mysystem/assets/splash.webp",
+  "manifest": "https://your/hosted/system/repo/system.json",
+  "download": "https://your/packaged/download/archive.zip"
+}
