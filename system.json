@@ -1,13 +1,13 @@
 {
-  "name": "boilerplate",
-  "title": "Boilerplate",
-  "description": "The Boilerplate system for FoundryVTT!",
-  "version": "1.1.0",
-  "minimumCoreVersion": "0.8.3",
-  "compatibleCoreVersion": "0.8.6",
-  "author": "Asacolips",
-  "esmodules": ["module/boilerplate.mjs"],
-  "styles": ["css/boilerplate.css"],
+  "name": "ryuutamav2",
+  "title": "Ryuutama Um RPG de Fantasia Natural",
+  "description": "The Ryuutama Um RPG de Fantasia Natural system for FoundryVTT!",
+  "version": "1.0.0",
+  "minimumCoreVersion": "0.8.6",
+  "compatibleCoreVersion": "9",
+  "author": "RogerioLobo",
+  "esmodules": ["module/ryuutamav2.mjs"],
+  "styles": ["css/ryuutamav2.css"],
   "scripts": [],
   "packs": [],
   "languages": [
@@ -15,6 +15,11 @@
       "lang": "en",
       "name": "English",
       "path": "lang/en.json"
+    },
+    {
+      "lang": "pt-br",
+      "name": "Portuguese",
+      "path": "lang/pt_br.json"
     }
   ],
   "gridDistance": 5,
