@@ -1,0 +1,41 @@
+<form class="{{cssClass}}" autocomplete="off">
+    {{> "systems/ryuutama/templates/item/parts/item-header.html"}}
+
+    <section class="body">
+        <div class="grid grid-4col">
+            <div class="resource">
+                <label for="data.accuracy" class="resource-label">{{ localize "RYUU.accuracy" }}</label>
+                <input type="text" name="data.accuracy" value="{{data.accuracy}}" data-dtype="String" />
+            </div>
+            <div class="resource">
+                <label for="data.accuracyBonus" class="resource-label">{{ localize "RYUU.accuracybonus" }}</label>
+                <input type="text" name="data.accuracyBonus" value="{{data.accuracyBonus}}" data-dtype="Number" />
+            </div>
+            <div class="resource">
+                <label for="data.damage" class="resource-label">{{ localize "RYUU.damage" }}</label>
+                <input type="text" name="data.damage" value="{{data.damage}}" data-dtype="String" />
+            </div>
+            <div class="resource">
+                <label for="data.damageBonus" class="resource-label">{{ localize "RYUU.damagebonus" }}</label>
+                <input type="text" name="data.damageBonus" value="{{data.damageBonus}}" data-dtype="Number" />
+            </div>
+        </div>
+        <div class="grid grid-4col">
+            <div class="resource">
+                <label for="data.class" class="resource-label">{{ localize "RYUU.weaponclass" }}</label>
+                <select class="attribute-select" name="data.class">
+                    {{#select data.class}}
+                        <option value="lightblade">{{ localize "RYUU.lightblade" }}</option>
+                        <option value="blade">{{ localize "RYUU.blade" }}</option>
+                        <option value="polearm">{{ localize "RYUU.polearm" }}</option>
+                        <option value="axe">{{ localize "RYUU.axe" }}</option>
+                        <option value="bow">{{ localize "RYUU.bow" }}</option>
+                        <option value="unarmed">{{ localize "RYUU.unarmed" }}</option>
+                    {{/select}}
+                </select>
+            </div>
+        </div>
+    </section>
+
+    {{> "systems/ryuutama/templates/item/parts/item-navigation.html"}}
+</form>

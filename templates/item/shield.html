@@ -1,0 +1,22 @@
+<form class="{{cssClass}}" autocomplete="off">
+    {{> "systems/ryuutama/templates/item/parts/item-header.html"}}
+
+    <section class="body">
+        <div class="grid grid-3col">
+            <div class="resource">
+                <label for="data.defense" class="resource-label">{{ localize "RYUU.dp" }}</label>
+                <input type="text" name="data.defense" value="{{data.defense}}" data-dtype="Number" />
+            </div>
+            <div class="resource">
+                <label for="data.penalty" class="resource-label">{{ localize "RYUU.penalty" }}</label>
+                <input type="text" name="data.penalty" value="{{data.penalty}}" data-dtype="Number" />
+            </div>
+            <div class="resource">
+                <label for="data.dodge" class="resource-label">{{ localize "RYUU.dodge" }}</label>
+                <input type="text" name="data.dodge" value="{{data.dodge}}" data-dtype="Number" />
+            </div>
+        </div>
+    </section>
+
+    {{> "systems/ryuutama/templates/item/parts/item-navigation.html"}}
+</form>
