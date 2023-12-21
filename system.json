@@ -82,8 +82,8 @@
 "gridUnits": "ft",
 "primaryTokenAttribute": "hp",
 "secondaryTokenAttribute": "mp",
-  "url": "https://github.com/rogerioloboBR/ryuutama/blob/main/system.json",
-  "manifest": "https://github.com/rogerioloboBR/ryuutama/blob/main/system.json",
-  "download": "https://github.com/rogerioloboBR/ryuutama/blob/main/system.json",
+  "url": "https://github.com/rogerioloboBR/ryuutama/",
+  "manifest": "https://raw.githubusercontent.com/rogerioloboBR/ryuutama/main/system.json",
+  "download": "https://github.com/rogerioloboBR/ryuutama/archive/main/system.json",
   "license": "LICENSE.txt"
 }
