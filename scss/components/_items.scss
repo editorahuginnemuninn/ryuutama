@@ -1,120 +1,116 @@
-// Section Header
-.items-header {
-  height: 28px;
-  margin: 2px 0;
-  padding: 0;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.05);
-  border: $border-groove;
-  font-weight: bold;
-  > * {
-    font-size: 14px;
-    text-align: center;
-  }
-  .item-name {
-    font-weight: bold;
-    padding-left: 5px;
-    text-align: left;
-    display: flex;
-    // font-size: 16px;
-  }
-}
-
-/* ----------------------------------------- */
-/*  Items Lists                              */
-/* ----------------------------------------- */
-
 .items-list {
   list-style: none;
-  margin: 0;
+  margin: 7px 0;
   padding: 0;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  color: $c-tan;
 
-  // Child lists
-  .item-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  .item-header {
+    font-weight: bold;
   }
 
-  // Item Name
+  .held-hidden {
+    display: none;
+  }
+
+
+  .item,
+  .level {
+    padding: 3px 0;
+    border-bottom: 1px solid #BBB;
+
+    .item-image {
+      flex: 0 0 24px;
+      margin-right: 5px;
+      border: none;
+    }
+
+    .terrain-checkbox {
+      flex: 0 0 10px;
+      margin-right: 5px;
+      margin-left: 10px;
+    }
+
+    img {
+      display: block;
+    }
+
+    .disabled {
+      display: none;
+    }
+
+    .item-description {
+      display: none;
+      -webkit-box-flex: 0;
+      -ms-flex: none;
+      flex: none;
+      width: 100%;
+    }
+  }
+
   .item-name {
-    flex: 2;
     margin: 0;
-    overflow: hidden;
-    font-size: 13px;
+  }
+
+  .terrain-name {
+    flex: 0 0 90px;
+  }
+
+  .terrain-check {
+    flex: 0 0 25px;
+  }
+
+  .terrain-input {
+    flex: 0 0 50px;
+  }
+
+  .level-points {
+    width: 30px;
+  }
+
+  .item-size {
+    flex: 0 0 10px;
     text-align: left;
-    align-items: center;
-    display: flex;
-    h3, h4 {
-      margin: 0;
-      white-space: nowrap;
-      overflow-x: hidden;
-    }
   }
 
-  // Control Buttons
+  .item-damage {
+    flex: 0 0 90px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .item-info {
+    flex: 0 0 80px;
+    text-align: center;
+  }
+
+  .item-accuracy {
+    flex: 0 0 120px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .item-equip {
+    flex: 0 0 90px;
+    text-align: center;
+  }
+
   .item-controls {
-    display: flex;
-    flex: 0 0 100px;
-    justify-content: flex-end;
-    a {
-      font-size: 12px;
-      text-align: center;
-      margin: 0 6px;
-    }
-  }
+    flex: 0 0 80px;
+    text-align: right;
 
-  // Individual Item
-  .item {
-    align-items: center;
-    padding: 0 2px; // to align with the header border
-    border-bottom: 1px solid $c-faint;
-    &:last-child { border-bottom: none; }
-    .item-name {
-      color: $c-dark;
-      .item-image {
-        flex: 0 0 30px;
-        height: 30px;
-        background-size: 30px;
-        border: none;
-        margin-right: 5px;
+    .item-toggle {
+      color: $c-beige;
+
+      &.active {
+        color: $c-olive;
+      }
+
+      &.fixed {
+        color: $c-crimson;
+
+        &:hover {
+          text-shadow: none;
+        }
       }
     }
   }
-
-  .item-prop {
-    text-align: center;
-    border-left: 1px solid #c9c7b8;
-    border-right: 1px solid #c9c7b8;
-    font-size: 12px;
-  }
-
-  // Section Header
-  .items-header {
-    height: 28px;
-    margin: 2px 0;
-    padding: 0;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.05);
-    border: $border-groove;
-    font-weight: bold;
-    > * {
-      font-size: 12px;
-      text-align: center;
-    }
-    .item-name {
-      padding-left: 5px;
-      text-align: left;
-      // font-size: 16px;
-    }
-  }
-}
-
-/* Example style for ryuutama (can be removed if not needed) */
-.item-formula {
-  flex: 0 0 200px;
-  padding: 0 8px;
 }
