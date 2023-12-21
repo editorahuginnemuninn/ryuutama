@@ -7,8 +7,8 @@
   "compatibleCoreVersion": "0.5.5",
   "templateVersion": 2,
   "author": "Rogerio",
-  "esmodules": ["module/boilerplate.js"],
-  "styles": ["css/boilerplate.css"],
+  "esmodules": ["module/ryuutama.js"],
+  "styles": ["css/ryuutama.css"],
   "scripts": [],
   "packs": [],
   "languages": [
