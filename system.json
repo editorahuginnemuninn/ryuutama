@@ -24,6 +24,6 @@
   "secondaryTokenAttribute": "power",
   "url": "",
   "manifest": "",
-  "download": "",
+  "download": "https://github.com/rogerioloboBR/ryuutama/blob/main/system.json",
   "license": "LICENSE.txt"
 }
