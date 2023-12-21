@@ -1,0 +1,326 @@
+{
+    "Actor": {
+        "types": ["character", "monster"],
+        "templates": {
+            "base": {
+                "biography": "",
+                "hp": {
+                    "value": 8,
+                    "min": 0,
+                    "max": 8
+                },
+                "mp": {
+                    "value": 8,
+                    "min": 0,
+                    "max": 8
+                },
+                "attributes": {
+                    "str": {
+                        "base": 4,
+                        "value": 4,
+                        "bonus": false
+                    },
+                    "dex": {
+                        "base": 4,
+                        "value": 4,
+                        "bonus": false
+                    },
+                    "int": {
+                        "base": 4,
+                        "value": 4,
+                        "bonus": false
+                    },
+                    "spi": {
+                        "base": 4,
+                        "value": 4,
+                        "bonus": false
+                    },
+                    "condition": {
+                        "value": 2,
+                        "min": 2,
+                        "max": 20
+                    },
+                    "initiative": 0,
+                    "level": 1
+                }
+            }
+        },
+        "character": {
+            "templates": ["base"],
+            "attributes": {
+                "experience": 0,
+                "gender": "",
+                "age": 20,
+                "capacity": {
+                    "max": 0,
+                    "value": 0,
+                    "equipped": 0
+                },
+                "gold": 1000
+            },
+            "traveling": {
+                "terrain": {},
+                "weather": {}
+            },
+            "effects": {
+                "injury": 0,
+                "poison": 0,
+                "sickness": 0,
+                "exhaustion": 0,
+                "muddled": 0,
+                "shock": 0
+            },
+            "immunity": {
+                "injury": false,
+                "poison": false,
+                "sickness": false,
+                "exhaustion": false,
+                "muddled": false,
+                "shock": false
+            },
+            "current": {
+                "terrain": "",
+                "weather": ""
+            },
+            "levels": {
+                "1": {
+                    "stats": true,
+                    "class": true,
+                    "mastered": "none",
+                    "attackMastered": "none"
+                },
+                "2": {
+                    "points": {
+                        "mp": 0,
+                        "hp": 0
+                    },
+                    "stat": "none",
+                    "actions": true
+                },
+                "3": {
+                    "points": {
+                        "mp": 0,
+                        "hp": 0
+                    },
+                    "specialty": "none"
+                },
+                "4": {
+                    "points": {
+                        "mp": 0,
+                        "hp": 0
+                    },
+                    "stat": "none",
+                    "immunity": "none"
+                },
+                "5": {
+                    "points": {
+                        "mp": 0,
+                        "hp": 0
+                    },
+                    "class": true
+                },
+                "6": {
+                    "points": {
+                        "mp": 0,
+                        "hp": 0
+                    },
+                    "stat": "none",
+                    "type": "none"
+                },
+                "7": {
+                    "points": {
+                        "mp": 0,
+                        "hp": 0
+                    },
+                    "specialty": "none",
+                    "attackMastered": "none"
+                },
+                "8": {
+                    "points": {
+                        "mp": 0,
+                        "hp": 0
+                    },
+                    "stat": "none"
+                },
+                "9": {
+                    "points": {
+                        "mp": 0,
+                        "hp": 0
+                    },
+                    "season": "none"
+                },
+                "10": {
+                    "points": {
+                        "mp": 0,
+                        "hp": 0
+                    },
+                    "stat": "none",
+                    "legendary": true
+                }
+            }
+        },
+        "monster": {
+            "templates": ["base"],
+            "habitat": "",
+            "season": "",
+            "ref": 0,
+            "accuracy": "",
+            "damage": "",
+            "armor": 0,
+            "ability": {
+                "description": "",
+                "accuracy": "",
+                "damage": ""
+            }
+        }
+    },
+    "Item": {
+        "types": ["item", "weapon", "armor", "shield", "class", "feature", "enchantment", "container", "traveling", "spell", "animal"],
+        "templates": {
+            "item": {
+                "givenName": "",
+                "description": "",
+                "price": 0,
+                "size": 1,
+                "durability": 1,
+                "enchantments": [],
+                "container": "",
+                "owner": ""
+            },
+            "equipment": {
+                "equip": "",
+                "equipped": false
+            },
+            "weapon": {
+                "isWeapon": true,
+                "accuracy": "",
+                "accuracyBonus": 0,
+                "damage": "",
+                "damageBonus": 0,
+                "class": "lightblade",
+                "masteredBonus": 0
+            },
+            "armor": {
+                "isArmor": true,
+                "defense": 0,
+                "penalty": 0
+            },
+            "shield": {
+                "isShield": true,
+                "dodge": 7
+            },
+            "traveling": {
+                "isTraveling": true,
+                "itemBonus": 1,
+                "terrain1": false,
+                "terrain2": false,
+                "terrain3": false,
+                "terrain4": false,
+                "terrain5": false,
+                "terrain6": false,
+                "terrain7": false,
+                "terrain8": false,
+                "terrain9": false,
+                "terrain10": false,
+                "terrain11": false,
+                "terrain12": false,
+                "terrain13": false,
+                "terrain14": false,
+                "terrain15": false,
+                "terrain16": false,
+                "weather1": false,
+                "weather2": false,
+                "weather3": false,
+                "weather4": false,
+                "weather5": false,
+                "weather6": false,
+                "weather7": false,
+                "weather8": false,
+                "weather9": false,
+                "weather10": false,
+                "weather11": false,
+                "weather12": false,
+                "weather13": false,
+                "weather14": false,
+                "weather15": false,
+                "weather16": false
+            },
+            "container": {
+                "canHold": 0,
+                "holding": [],
+                "holdingSize": 0
+            },
+            "feature": {
+                "class": "",
+                "journey": 0,
+                "condition": 0,
+                "capacity": 0,
+                "stat": "",
+                "mastered": "none",
+                "farmer": false
+            },
+            "spell": {
+                "level": "low",
+                "cost": 2,
+                "season": "none",
+                "ritual": false,
+                "duration": "",
+                "target": "",
+                "range": ""
+            }
+        },
+        "item": {
+            "templates": ["item"]
+        },
+        "weapon": {
+            "templates": ["item", "equipment", "weapon"]
+        },
+        "armor": {
+            "templates": ["item", "equipment", "armor"]
+        },
+        "shield": {
+            "templates": ["item", "equipment", "armor", "shield"]
+        },
+        "traveling": {
+            "templates": ["item", "equipment", "traveling"]
+        },
+        "container": {
+            "templates": ["item", "container"]
+        },
+        "animal": {
+            "templates": ["item", "container", "traveling"]
+        },
+        "enchantment": {
+            "description": "",
+            "costMod": 0,
+            "modType": 0,
+            "durabilityMultiplier": 0,
+            "conditionPenalty": 0,
+            "unusable": false,
+            "armorPenaltyMod": 0,
+            "sizeMod": 0,
+            "setDurability": false,
+            "durabilityValue": 0,
+            "unbreakable": false,
+            "hpMod": 0,
+            "mpMod": 0,
+            "emitsLight": false,
+            "weightless": false,
+            "plusOne": false
+        },
+        "spell": {
+            "templates": ["item", "spell"],
+            "size": 0
+        },
+        "class": {
+            "templates": ["item"],
+            "type": "none",
+            "features": [],
+            "size": 0
+        },
+        "feature": {
+            "templates": ["item", "feature"],
+            "size": 0
+        }
+    }
+}

@@ -1,0 +1,270 @@
+<div class="tab level" data-group="primary" data-tab="level">
+    <ol class="items-list">
+        {{#each data.levels as |level key|}}
+            {{#if (gte @root.data.attributes.level key)}}
+                <li class="level flexrow item-header">
+                    <div class="item-name">{{ localize "RYUU.level" }} {{key}}</div>
+                </li>
+                {{#if level.stats}}
+                    <li class="level flexrow">
+                        <div class="item-image"></div>
+                        <div>
+                            {{ localize "RYUU.str.short" }}:
+                            <select class="attribute-select" name="data.attributes.str.base">
+                                {{#select @root.data.attributes.str.base}}
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                {{/select}}
+                            </select>
+                        </div>
+                        <div>
+                            {{ localize "RYUU.dex.short" }}:
+                            <select class="attribute-select" name="data.attributes.dex.base">
+                                {{#select @root.data.attributes.dex.base}}
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                {{/select}}
+                            </select>
+                        </div>
+                        <div>
+                            {{ localize "RYUU.int.short" }}:
+                            <select class="attribute-select" name="data.attributes.int.base">
+                                {{#select @root.data.attributes.int.base}}
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                {{/select}}
+                            </select>
+                        </div>
+                        <div>
+                            {{ localize "RYUU.spi.short" }}:
+                            <select class="attribute-select" name="data.attributes.spi.base">
+                                {{#select @root.data.attributes.spi.base}}
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                {{/select}}
+                            </select>
+                        </div>
+                    </li>
+                {{/if}}
+                <li class="level flexrow">
+                    <div class="item-image"></div>
+                    {{#if level.points}}
+                        <div>
+                            {{ localize "RYUU.hp.short" }}: <input type="text" class="level-points" name="data.levels.{{key}}.points.hp" value="{{level.points.hp}}" data-dtype="Number" />
+                            {{ localize "RYUU.mp.short" }}: <input type="text" class="level-points" name="data.levels.{{key}}.points.mp" value="{{level.points.mp}}" data-dtype="Number" />
+                        </div>
+                    {{/if}}
+                    {{#if level.stat}}
+                        <div>
+                            {{ localize "RYUU.statincrease" }}:
+                            <select class="attribute-select" name="data.levels.{{key}}.stat">
+                                {{#select level.stat}}
+                                    <option value="none"></option>
+                                    <option value="str">{{ localize "RYUU.str.short" }}</option>
+                                    <option value="dex">{{ localize "RYUU.dex.short" }}</option>
+                                    <option value="int">{{ localize "RYUU.int.short" }}</option>
+                                    <option value="spi">{{ localize "RYUU.spi.short" }}</option>
+                                {{/select}}
+                            </select>
+                        </div>
+                    {{/if}}
+                    {{#if level.mastered}}
+                        <div>
+                            {{ localize "RYUU.mastered" }}:
+                            <select class="attribute-select" name="data.levels.{{key}}.mastered">
+                                {{#select level.mastered}}
+                                    <option value="lightblade">{{ localize "RYUU.lightblade" }}</option>
+                                    <option value="blade">{{ localize "RYUU.blade" }}</option>
+                                    <option value="polearm">{{ localize "RYUU.polearm" }}</option>
+                                    <option value="axe">{{ localize "RYUU.axe" }}</option>
+                                    <option value="bow">{{ localize "RYUU.bow" }}</option>
+                                    <option value="unarmed">{{ localize "RYUU.unarmed" }}</option>
+                                {{/select}}
+                            </select>
+                        </div>
+                    {{/if}}
+                    {{#if level.attackMastered}}
+                        <div>
+                            {{ localize "RYUU.mastered" }}:
+                            <select class="attribute-select" name="data.levels.{{key}}.attackMastered">
+                                {{#select level.attackMastered}}
+                                    <option value="none"></option>
+                                    <option value="lightblade">{{ localize "RYUU.lightblade" }}</option>
+                                    <option value="blade">{{ localize "RYUU.blade" }}</option>
+                                    <option value="polearm">{{ localize "RYUU.polearm" }}</option>
+                                    <option value="axe">{{ localize "RYUU.axe" }}</option>
+                                    <option value="bow">{{ localize "RYUU.bow" }}</option>
+                                    <option value="unarmed">{{ localize "RYUU.unarmed" }}</option>
+                                {{/select}}
+                            </select>
+                        </div>
+                    {{/if}}
+                    {{#if level.actions}}
+                        <div>
+                            {{ localize "RYUU.actions" }}
+                        </div>
+                    {{/if}}
+                    {{#if level.specialty}}
+                        <div>
+                            {{ localize "RYUU.favored" }}:
+                            <select class="attribute-select" name="data.levels.{{key}}.specialty">
+                                {{#select level.specialty}}
+                                    <option value="none"></option>
+                                    {{#if (settings "terrainName1")}}
+                                        <option value="terrain1">{{ settings "terrainName1" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "terrainName2")}}
+                                        <option value="terrain2">{{ settings "terrainName2" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "terrainName3")}}
+                                        <option value="terrain3">{{ settings "terrainName3" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "terrainName4")}}
+                                        <option value="terrain4">{{ settings "terrainName4" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "terrainName5")}}
+                                        <option value="terrain5">{{ settings "terrainName5" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "terrainName6")}}
+                                        <option value="terrain6">{{ settings "terrainName6" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "terrainName7")}}
+                                        <option value="terrain7">{{ settings "terrainName7" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "terrainName8")}}
+                                        <option value="terrain8">{{ settings "terrainName8" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "terrainName9")}}
+                                        <option value="terrain9">{{ settings "terrainName9" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "terrainName10")}}
+                                        <option value="terrain10">{{ settings "terrainName10" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "terrainName11")}}
+                                        <option value="terrain11">{{ settings "terrainName11" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "terrainName12")}}
+                                        <option value="terrain12">{{ settings "terrainName12" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "terrainName13")}}
+                                        <option value="terrain13">{{ settings "terrainName13" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "terrainName14")}}
+                                        <option value="terrain14">{{ settings "terrainName14" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "terrainName15")}}
+                                        <option value="terrain15">{{ settings "terrainName15" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "terrainName16")}}
+                                        <option value="terrain16">{{ settings "terrainName16" }}</option>
+                                    {{/if}}
+
+                                    
+                                    {{#if (settings "weatherName1")}}
+                                        <option value="weather1">{{ settings "weatherName1" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "weatherName2")}}
+                                        <option value="weather2">{{ settings "weatherName2" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "weatherName3")}}
+                                        <option value="weather3">{{ settings "weatherName3" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "weatherName4")}}
+                                        <option value="weather4">{{ settings "weatherName4" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "weatherName5")}}
+                                        <option value="weather5">{{ settings "weatherName5" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "weatherName6")}}
+                                        <option value="weather6">{{ settings "weatherName6" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "weatherName7")}}
+                                        <option value="weather7">{{ settings "weatherName7" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "weatherName8")}}
+                                        <option value="weather8">{{ settings "weatherName8" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "weatherName9")}}
+                                        <option value="weather9">{{ settings "weatherName9" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "weatherName10")}}
+                                        <option value="weather10">{{ settings "weatherName10" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "weatherName11")}}
+                                        <option value="weather11">{{ settings "weatherName11" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "weatherName12")}}
+                                        <option value="weather12">{{ settings "weatherName12" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "weatherName13")}}
+                                        <option value="weather13">{{ settings "weatherName13" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "weatherName14")}}
+                                        <option value="weather14">{{ settings "weatherName14" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "weatherName15")}}
+                                        <option value="weather15">{{ settings "weatherName15" }}</option>
+                                    {{/if}}
+                                    {{#if (settings "weatherName16")}}
+                                        <option value="weather16">{{ settings "weatherName16" }}</option>
+                                    {{/if}}
+                                {{/select}}
+                            </select>
+                        </div>
+                    {{/if}}
+                    {{#if level.immunity}}
+                        <div>
+                            {{ localize "RYUU.immunity" }}:
+                            <select class="attribute-select" name="data.levels.{{key}}.immunity">
+                                {{#select level.immunity}}
+                                    <option value="none"></option>
+                                    <option value="injury">{{ localize "RYUU.injury" }}</option>
+                                    <option value="poison">{{ localize "RYUU.poison" }}</option>
+                                    <option value="sickness">{{ localize "RYUU.sickness" }}</option>
+                                    <option value="exhaustion">{{ localize "RYUU.exhaustion" }}</option>
+                                    <option value="muddled">{{ localize "RYUU.muddled" }}</option>
+                                    <option value="shock">{{ localize "RYUU.shock" }}</option>
+                                {{/select}}
+                            </select>
+                        </div>
+                    {{/if}}
+                    {{#if level.class}}
+                        {{#if (gt key 1)}}
+                            <div>
+                                {{ localize "RYUU.extraclass" }}
+                            </div>
+                        {{/if}}
+                    {{/if}}
+                    {{#if level.type}}
+                        <div>
+                            {{ localize "RYUU.extratype" }}
+                        </div>
+                    {{/if}}
+                    {{#if level.season}}
+                        <div>
+                            {{ localize "RYUU.favorseason" }}:
+                            <select class="attribute-select" name="data.levels.{{key}}.season">
+                                {{#select level.season}}
+                                    <option value="none"></option>
+                                    <option value="spring">{{ localize "RYUU.spring" }}</option>
+                                    <option value="summer">{{ localize "RYUU.summer" }}</option>
+                                    <option value="fall">{{ localize "RYUU.fall" }}</option>
+                                    <option value="winter">{{ localize "RYUU.winter" }}</option>
+                                {{/select}}
+                            </select>
+                        </div>
+                    {{/if}}
+                    {{#if level.legendary}}
+                        <div>
+                            {{ localize "RYUU.legendary" }}
+                        </div>
+                    {{/if}}
+                </li>
+            {{/if}}
+        {{/each}}
+    </ol>
+</div>
