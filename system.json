@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "compatibility": {
     "minimum": "10",
-    "verified": "11",
+    "verified": "11.299",
     "maximum": "11"
   },
   "authors": [
@@ -17,8 +17,8 @@
     }
   ],
   "scripts": [],
-  "esmodules": [],
-  "styles": [],
+  "esmodules": ["module/ryuutama.js"],
+  "styles": ["css/ryuutama.css"],
   "packs": [],
   "socket": false,
   "initiative": "1d20",
